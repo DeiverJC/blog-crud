@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
- 
-class NewPost extends Component {
-    
-    state = {
-        title: '',
-        body: ''
-    };
+import React, { Component } from 'react';
+
+class EditPost extends Component {
+
+    state= {
+        title: this.props.post.title,
+        body: this.props.post.body,
+        isEditing: false
+    }
 
     handleInputChange = (e) => {
         this.setState({
@@ -16,27 +17,29 @@ class NewPost extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         if (this.state.title.trim() && this.state.body.trim()) {
-            this.props.onAddPost(this.state);
+            this.props.onUpdate({id: this.props.post.id, data: this.state});
             this.handleReset();
+            console.log(this.state);
         }
     };
 
     handleReset = () => {
         this.setState({
             title: '',
-            body: ''
+            body: '',
+            isEditing: false
         });
     };
 
     render () {
         return (
-            <form onSubmit={ this.handleSubmit }>
+            <form>
                 <input 
                     type="text"
                     placeholder="Title"
                     name="title"
                     onChange={ this.handleInputChange }
-                    value={ this.state.title }
+                    defaultValue={ this.props.post.title }
                 />
                 <br />
                 <br />
@@ -44,18 +47,15 @@ class NewPost extends Component {
                     name="body"
                     placeholder="body"
                     onChange={ this.handleInputChange }
-                    value={ this.state.body }
+                    defaultValue={ this.props.post.body }
                 />
                 <hr />
-                <button type="submit">
-                    Add post
-                </button>
-                <button type="button" onClick={ this.handleReset }>
-                    Reset
+                <button type="submit" onClick={ this.handleSubmit }>
+                    update
                 </button>
             </form>
         );
     }
 }
 
-export default NewPost;
+export default EditPost;

@@ -9,11 +9,14 @@ const styles = {
     borderRadius: '7px'
 };
 
-export default ({ post: { id, title, body }, onDelete }) => {
+export default ({ post: { id, title, body }, onDelete, onEdit }) => {
   return (
       <div style={ styles }>
             <h2>{ title }</h2>
             <p>{ body }</p>
+            <button type="button" onClick={ ()  => onEdit(id)}>
+                Edit
+            </button>
             <button type="button" onClick={ ()  => onDelete(id)}>
                 Delete
             </button>
