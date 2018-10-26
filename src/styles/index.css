@@ -16,3 +16,10 @@ body {
 .title-h5 {
   font-size: 25px;
 }
+.fab {
+  font-size: 20px !important;
+}
+.color-github{color:#24292e;}
+.color-linkedin{color:#007bb5;}
+.color-instagram{color:#c32aa3;}
+.color-twitter{color:#1da1f2;}

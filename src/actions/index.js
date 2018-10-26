@@ -7,7 +7,8 @@ export const addPost = ({ title, body }) => ({
         id: uuidv4(),
         title,
         body,
-        isEditing: false
+        isEditing: false,
+        date: Date.now()
     }
 });
 

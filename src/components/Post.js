@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 export default ({ post, onDelete, onEdit }) => {
   return (
@@ -6,7 +7,9 @@ export default ({ post, onDelete, onEdit }) => {
             <div className="card-body">
                 <h5 className="card-title">
                     {post.title}                    
-                    <small className="text-muted float-right">2 days ago</small>
+                    <small className="text-muted float-right">
+                        <Moment fromNow>{post.date}</Moment>
+                    </small>
                 </h5>
                 <p className="card-text">
                     {post.body}
