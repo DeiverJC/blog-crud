@@ -30,30 +30,44 @@ class NewPost extends Component {
 
     render () {
         return (
-            <form onSubmit={ this.handleSubmit }>
-                <input 
-                    type="text"
-                    placeholder="Title"
-                    name="title"
-                    onChange={ this.handleInputChange }
-                    value={ this.state.title }
-                />
-                <br />
-                <br />
-                <textarea 
-                    name="body"
-                    placeholder="body"
-                    onChange={ this.handleInputChange }
-                    value={ this.state.body }
-                />
-                <hr />
-                <button type="submit">
-                    Add post
-                </button>
-                <button type="button" onClick={ this.handleReset }>
-                    Reset
-                </button>
-            </form>
+            <div className="card border-0 rounded-0 shadow">
+                <div className="card-body">
+                    <h5 className="card-title text-center">
+                        <span className="title-h5">Post</span>
+                    </h5>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="form-group">
+                            <input 
+                                type="text"
+                                name="title"
+                                value={this.state.title}
+                                placeholder="Enter title" 
+                                onChange={this.handleInputChange}
+                                className="form-control form-control-lg border border-secondary"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <textarea 
+                                rows="10" 
+                                cols="30" 
+                                name="body" 
+                                value={this.state.body}
+                                placeholder="Enter post"
+                                onChange={this.handleInputChange}
+                                className="form-control form-control-lg border border-secondary" 
+                            />
+                        </div>
+                        <div className="form-group text-center">
+                            <button 
+                                type="submit" 
+                                className="btn btn-primary rounded pl-5 pr-5"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         );
     }
 }

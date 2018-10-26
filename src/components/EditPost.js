@@ -19,7 +19,6 @@ class EditPost extends Component {
         if (this.state.title.trim() && this.state.body.trim()) {
             this.props.onUpdate({id: this.props.post.id, data: this.state});
             this.handleReset();
-            console.log(this.state);
         }
     };
 
@@ -33,27 +32,45 @@ class EditPost extends Component {
 
     render () {
         return (
-            <form>
-                <input 
-                    type="text"
-                    placeholder="Title"
-                    name="title"
-                    onChange={ this.handleInputChange }
-                    defaultValue={ this.props.post.title }
-                />
-                <br />
-                <br />
-                <textarea 
-                    name="body"
-                    placeholder="body"
-                    onChange={ this.handleInputChange }
-                    defaultValue={ this.props.post.body }
-                />
-                <hr />
-                <button type="submit" onClick={ this.handleSubmit }>
-                    update
-                </button>
-            </form>
+            <div className="card border-0 rounded-0 shadow">
+                <div className="card-body">
+                    <h5 className="card-title text-center">
+                        <span className="title-h5">Editing post</span>
+                    </h5>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="form-group">
+                            <input 
+                                type="text"
+                                name="title"
+                                placeholder="Enter title" 
+                                onChange={this.handleInputChange}
+                                defaultValue={this.props.post.title}
+                                className="form-control form-control-lg border border-secondary"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <textarea 
+                                rows="3" 
+                                cols="30" 
+                                name="body" 
+                                placeholder="Enter post"
+                                onChange={this.handleInputChange}
+                                defaultValue={this.props.post.body}
+                                className="form-control form-control-lg border border-secondary" 
+                            />
+                        </div>
+                        <div className="form-group text-center">
+                            <button 
+                                type="submit" 
+                                onClick={this.handleSubmit}
+                                className="btn btn-success rounded pl-5 pr-5"
+                            >
+                                Update
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         );
     }
 }

@@ -1,25 +1,33 @@
 import React from 'react';
 
-const styles = {
-    borderBottom: '2px solid #eee',
-    background: '#fafafa',
-    margin: '.75rem auto',
-    padding: '.6rem 1rem',
-    maxWidth: '500px',
-    borderRadius: '7px'
-};
-
-export default ({ post: { id, title, body }, onDelete, onEdit }) => {
+export default ({ post, onDelete, onEdit }) => {
   return (
-      <div style={ styles }>
-            <h2>{ title }</h2>
-            <p>{ body }</p>
-            <button type="button" onClick={ ()  => onEdit(id)}>
-                Edit
-            </button>
-            <button type="button" onClick={ ()  => onDelete(id)}>
-                Delete
-            </button>
+        <div className="card border-0 rounded-0 mb-2 shadow-sm">
+            <div className="card-body">
+                <h5 className="card-title">
+                    {post.title}                    
+                    <small className="text-muted float-right">2 days ago</small>
+                </h5>
+                <p className="card-text">
+                    {post.body}
+                </p>
+                <div className="float-right">
+                    <button 
+                        type="button"
+                        onClick={() => onEdit(post.id)}
+                        className="btn btn-info rounded pr-3 pl-3 mr-1"
+                    >
+                        Edit
+                    </button>
+                    <button 
+                        type="button"
+                        onClick={() => onDelete(post.id)}
+                        className="btn btn-danger rounded pr-3 pl-3"
+                    >
+                        Delete
+                    </button>
+                </div>
+            </div>
         </div>
   );
 }
