@@ -13,56 +13,56 @@ class App extends Component {
 						</h2>
 						<ul className="nav">
 							<li className="nav-item">
-								<a 
-									target="blank" 
-									className="nav-link color-linkedin" 
+								<a
+									target="blank"
+									className="nav-link color-linkedin"
 									href="https://www.linkedin.com/in/deiverjc/"
 								>
-									<i class="fab fa-linkedin-in"></i>
+									<i className="fab fa-linkedin-in"></i>
 								</a>
 							</li>
 							<li className="nav-item">
-								<a 
-									target="blank" 
-									className="nav-link color-github" 
+								<a
+									target="blank"
+									className="nav-link color-github"
 									href="https://github.com/DeiverJC"
 								>
-									<i class="fab fa-github"></i>
+									<i className="fab fa-github"></i>
 								</a>
 							</li>
 							<li className="nav-item">
-								<a 
-									target="blank" 
-									className="nav-link color-instagram" 
+								<a
+									target="blank"
+									className="nav-link color-instagram"
 									href="https://www.instagram.com/deiverjc/"
 								>
-									<i class="fab fa-instagram"></i>
+									<i className="fab fa-instagram"></i>
 								</a>
 							</li>
 							<li className="nav-item">
-								<a 
-									target="blank" 
-									className="nav-link color-twitter" 
+								<a
+									target="blank"
+									className="nav-link color-twitter"
 									href="https://twitter.com/DeiverJC">
-									<i class="fab fa-twitter"></i>
+									<i className="fab fa-twitter"></i>
 								</a>
 							</li>
 							<li className="nav-item">
 								<small className="nav-link text-muted">by @Deiverjc</small>
 							</li>
-						</ul>     
+						</ul>
 					</nav>
 				</header>
 				<div className="container-fluid">
 					<div className="row mt-4">
-						<div className="col-4 ">
+						<div className="col-md-4 ">
 
 							<AddPost />
 
 						</div>
-						<div className="col-8">
+						<div className="col-md-8">
 							<div className="row">
-								<div className="col-12">
+								<div className="col-md-12">
 
 									<PostList />
 
