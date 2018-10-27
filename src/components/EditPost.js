@@ -39,29 +39,31 @@ class EditPost extends Component {
                     </h5>
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
-                            <input 
+                            <input
+                                required
                                 type="text"
                                 name="title"
-                                placeholder="Enter title" 
+                                placeholder="Enter title"
                                 onChange={this.handleInputChange}
                                 defaultValue={this.props.post.title}
                                 className="form-control form-control-lg border border-secondary"
                             />
                         </div>
                         <div className="form-group">
-                            <textarea 
-                                rows="3" 
-                                cols="30" 
-                                name="body" 
+                            <textarea
+                                required
+                                rows="3"
+                                cols="30"
+                                name="body"
                                 placeholder="Enter post"
                                 onChange={this.handleInputChange}
                                 defaultValue={this.props.post.body}
-                                className="form-control form-control-lg border border-secondary" 
+                                className="form-control form-control-lg border border-secondary"
                             />
                         </div>
                         <div className="form-group text-center">
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 onClick={this.handleSubmit}
                                 className="btn btn-success rounded pl-5 pr-5"
                             >

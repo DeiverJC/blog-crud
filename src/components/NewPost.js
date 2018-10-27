@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
- 
+
 class NewPost extends Component {
-    
+
     state = {
         title: '',
         body: ''
@@ -37,29 +37,31 @@ class NewPost extends Component {
                     </h5>
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
-                            <input 
+                            <input
+                                required
                                 type="text"
                                 name="title"
                                 value={this.state.title}
-                                placeholder="Enter title" 
+                                placeholder="Enter title"
                                 onChange={this.handleInputChange}
                                 className="form-control form-control-lg border border-secondary"
                             />
                         </div>
                         <div className="form-group">
-                            <textarea 
-                                rows="10" 
-                                cols="30" 
-                                name="body" 
+                            <textarea
+                                required
+                                rows="10"
+                                cols="30"
+                                name="body"
                                 value={this.state.body}
                                 placeholder="Enter post"
                                 onChange={this.handleInputChange}
-                                className="form-control form-control-lg border border-secondary" 
+                                className="form-control form-control-lg border border-secondary"
                             />
                         </div>
                         <div className="form-group text-center">
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 className="btn btn-primary rounded pl-5 pr-5"
                             >
                                 Submit
