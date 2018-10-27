@@ -1,7 +1,7 @@
 {
   "main.css": "/blog-crud/static/css/main.18c45120.chunk.css",
-  "main.js": "/blog-crud/static/js/main.3eec9d99.chunk.js",
-  "main.js.map": "/blog-crud/static/js/main.3eec9d99.chunk.js.map",
+  "main.js": "/blog-crud/static/js/main.f1fef0a0.chunk.js",
+  "main.js.map": "/blog-crud/static/js/main.f1fef0a0.chunk.js.map",
   "static/css/1.a78d3c71.chunk.css": "/blog-crud/static/css/1.a78d3c71.chunk.css",
   "static/js/1.05f68e7f.chunk.js": "/blog-crud/static/js/1.05f68e7f.chunk.js",
   "static/js/1.05f68e7f.chunk.js.map": "/blog-crud/static/js/1.05f68e7f.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.a78d3c71.chunk.css.map": "/blog-crud/static/css/1.a78d3c71.chunk.css.map",
   "static/css/main.18c45120.chunk.css.map": "/blog-crud/static/css/main.18c45120.chunk.css.map",
   "index.html": "/blog-crud/index.html",
-  "precache-manifest.db856665c10b9d8871897dfc9e9df354.js": "/blog-crud/precache-manifest.db856665c10b9d8871897dfc9e9df354.js",
+  "precache-manifest.e78f4cfe6254e4dcdd977a93e3904c7f.js": "/blog-crud/precache-manifest.e78f4cfe6254e4dcdd977a93e3904c7f.js",
   "service-worker.js": "/blog-crud/service-worker.js"
 }
